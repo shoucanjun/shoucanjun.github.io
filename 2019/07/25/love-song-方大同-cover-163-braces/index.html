@@ -117,18 +117,18 @@
   </script>
 
 
-  <meta name="description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-aIRbgDOL&quot;),             narrow: false,             autoplay: true,">
+  <meta name="description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-iMhyzXZM&quot;),             narrow: false,             autoplay: true,">
 <meta name="keywords" content="musicshare">
 <meta property="og:type" content="article">
 <meta property="og:title" content="love song - 方大同 cover | 163 braces">
 <meta property="og:url" content="http://shoucanjun.top/2019/07/25/love-song-方大同-cover-163-braces/index.html">
 <meta property="og:site_name" content="seon">
-<meta property="og:description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-aIRbgDOL&quot;),             narrow: false,             autoplay: true,">
+<meta property="og:description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-iMhyzXZM&quot;),             narrow: false,             autoplay: true,">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2019-07-25T14:40:18.824Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="love song - 方大同 cover | 163 braces">
-<meta name="twitter:description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-aIRbgDOL&quot;),             narrow: false,             autoplay: true,">
+<meta name="twitter:description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-iMhyzXZM&quot;),             narrow: false,             autoplay: true,">
 
 
 
@@ -363,6 +363,14 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             Views:  
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
 
           
 
@@ -382,12 +390,12 @@
 
       
         
-        <div id="aplayer-aIRbgDOL" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;width:100%;">
+        <div id="aplayer-iMhyzXZM" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;width:100%;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-aIRbgDOL"),
+            element: document.getElementById("aplayer-iMhyzXZM"),
             narrow: false,
             autoplay: true,
             showlrc: false,
@@ -641,6 +649,24 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="Total Visitors">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="Total Views">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
 
 
 
@@ -794,104 +820,6 @@
   
 
   
-  <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js"></script>
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.1/bluebird.core.min.js"></script>
-  
-  <script>
-    (function () {
-
-      firebase.initializeApp({
-        apiKey: 'AIzaSyDusLAC-yo-bYRUA-hWABxpGPPHiMavmfE',
-        projectId: 'hexoviewtorcount'
-      })
-
-      function getCount(doc, increaseCount) {
-        //increaseCount will be false when not in article page
-
-        return doc.get().then(function (d) {
-          var count
-          if (!d.exists) { //has no data, initialize count
-            if (increaseCount) {
-              doc.set({
-                count: 1
-              })
-              count = 1
-            }
-            else {
-              count = 0
-            }
-          }
-          else { //has data
-            count = d.data().count
-            if (increaseCount) {
-              if (!(window.localStorage && window.localStorage.getItem(title))) { //if first view this article
-                doc.set({ //increase count
-                  count: count + 1
-                })
-                count++
-              }
-            }
-          }
-          if (window.localStorage && increaseCount) { //mark as visited
-            localStorage.setItem(title, true)
-          }
-
-          return count
-        })
-      }
-
-      function appendCountTo(el) {
-        return function (count) {
-          $(el).append(
-            $('<span>').addClass('post-visitors-count').append(
-              $('<span>').addClass('post-meta-divider').text('|')
-            ).append(
-              $('<span>').addClass('post-meta-item-icon').append(
-                $('<i>').addClass('fa fa-users')
-              )
-              ).append($('<span>').text('Views ' + count))
-          )
-        }
-      }
-
-      var db = firebase.firestore()
-      var articles = db.collection('articles')
-
-      //https://hexo.io/zh-tw/docs/variables.html
-      var isPost = 'love song - 方大同 cover | 163 braces'.length > 0
-      var isArchive = '' === 'true'
-      var isCategory = ''.length > 0
-      var isTag = ''.length > 0
-
-      if (isPost) { //is article page
-        var title = 'love song - 方大同 cover | 163 braces'
-        var doc = articles.doc(title)
-
-        getCount(doc, true).then(appendCountTo($('.post-meta')))
-      }
-      else if (!isArchive && !isCategory && !isTag) { //is index page
-        var titles = [] //array to titles
-
-        var postsstr = '' //if you have a better way to get titles of posts, please change it
-        eval(postsstr)
-
-        var promises = titles.map(function (title) {
-          return articles.doc(title)
-        }).map(function (doc) {
-          return getCount(doc)
-        })
-        Promise.all(promises).then(function (counts) {
-          var metas = $('.post-meta')
-          counts.forEach(function (val, idx) {
-            appendCountTo(metas[idx])(val)
-          })
-        })
-      }
-    })()
-  </script>
-
 
   
 

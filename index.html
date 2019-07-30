@@ -386,10 +386,10 @@
         
           
             
-        <div id="aplayer-EmbHsryt" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
+        <div id="aplayer-fehZqbJR" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
 			  <script>
 				  var options = {"narrow":false,"autoplay":true,"showlrc":0,"mode":"random","mutex":true,"theme":"#e6d0b2","preload":"auto","listmaxheight":"513px","music":[{"title":"陪妳過假日","author":"Leo王-feat. 9m88","url":"/2019/07/28/陪妳過假日-Leo王-feat-9m88/staywithyouinholiday1.mp3","pic":"/2019/07/28/陪妳過假日-Leo王-feat-9m88/staywithyouinholiday1.png"},{"title":"陪妳過假日","author":"HMV record shop 新宿 ALTA","url":"/2019/07/28/陪妳過假日-Leo王-feat-9m88/staywithyouinholiday2.mp3","pic":"/2019/07/28/陪妳過假日-Leo王-feat-9m88/staywithyouinholiday2.png"}]};
-				  options.element = document.getElementById("aplayer-EmbHsryt");
+				  options.element = document.getElementById("aplayer-fehZqbJR");
 				  var ap = new APlayer(options);
 			    window.aplayers || (window.aplayers = []);
 				  window.aplayers.push(ap);
@@ -683,12 +683,12 @@
         
           
             
-        <div id="aplayer-aIRbgDOL" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;width:100%;">
+        <div id="aplayer-iMhyzXZM" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;width:100%;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-aIRbgDOL"),
+            element: document.getElementById("aplayer-iMhyzXZM"),
             narrow: false,
             autoplay: true,
             showlrc: false,
@@ -1019,12 +1019,12 @@
         
           
             
-        <div id="aplayer-GlZlvkUV" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;width:100%;">
+        <div id="aplayer-HNGcaKSz" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;width:100%;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-GlZlvkUV"),
+            element: document.getElementById("aplayer-HNGcaKSz"),
             narrow: false,
             autoplay: true,
             showlrc: false,
@@ -1591,7 +1591,7 @@
         
           
             
-    <div id="aplayer-QfdKFTCf" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="22335120" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="none" data-theme="#ad7a86"></div>
+    <div id="aplayer-MzcCaXRn" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="22335120" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="none" data-theme="#ad7a86"></div>
 <p>Legends say,he still looking for the dollar. XD</p>
 
           
@@ -1940,6 +1940,24 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="Total Visitors">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="Total Views">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
 
 
 
@@ -2078,104 +2096,6 @@
   
 
   
-  <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js"></script>
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.1/bluebird.core.min.js"></script>
-  
-  <script>
-    (function () {
-
-      firebase.initializeApp({
-        apiKey: 'AIzaSyDusLAC-yo-bYRUA-hWABxpGPPHiMavmfE',
-        projectId: 'hexoviewtorcount'
-      })
-
-      function getCount(doc, increaseCount) {
-        //increaseCount will be false when not in article page
-
-        return doc.get().then(function (d) {
-          var count
-          if (!d.exists) { //has no data, initialize count
-            if (increaseCount) {
-              doc.set({
-                count: 1
-              })
-              count = 1
-            }
-            else {
-              count = 0
-            }
-          }
-          else { //has data
-            count = d.data().count
-            if (increaseCount) {
-              if (!(window.localStorage && window.localStorage.getItem(title))) { //if first view this article
-                doc.set({ //increase count
-                  count: count + 1
-                })
-                count++
-              }
-            }
-          }
-          if (window.localStorage && increaseCount) { //mark as visited
-            localStorage.setItem(title, true)
-          }
-
-          return count
-        })
-      }
-
-      function appendCountTo(el) {
-        return function (count) {
-          $(el).append(
-            $('<span>').addClass('post-visitors-count').append(
-              $('<span>').addClass('post-meta-divider').text('|')
-            ).append(
-              $('<span>').addClass('post-meta-item-icon').append(
-                $('<i>').addClass('fa fa-users')
-              )
-              ).append($('<span>').text('Views ' + count))
-          )
-        }
-      }
-
-      var db = firebase.firestore()
-      var articles = db.collection('articles')
-
-      //https://hexo.io/zh-tw/docs/variables.html
-      var isPost = ''.length > 0
-      var isArchive = '' === 'true'
-      var isCategory = ''.length > 0
-      var isTag = ''.length > 0
-
-      if (isPost) { //is article page
-        var title = ''
-        var doc = articles.doc(title)
-
-        getCount(doc, true).then(appendCountTo($('.post-meta')))
-      }
-      else if (!isArchive && !isCategory && !isTag) { //is index page
-        var titles = [] //array to titles
-
-        var postsstr = 'titles.push("陪妳過假日-9m88");titles.push("拔牙恢复期的注意事项");titles.push("love song - 方大同 cover | 163 braces");titles.push("箍牙日记（持续更新");titles.push("直到我遇見了你 - 李友廷 cover | mizaitaro x Veelah");titles.push("diary");titles.push("diary");titles.push("diary");titles.push("I need a dollar - Aloe Blacc");titles.push("diary - 放你麻痹的辣椒在海鲜上");' //if you have a better way to get titles of posts, please change it
-        eval(postsstr)
-
-        var promises = titles.map(function (title) {
-          return articles.doc(title)
-        }).map(function (doc) {
-          return getCount(doc)
-        })
-        Promise.all(promises).then(function (counts) {
-          var metas = $('.post-meta')
-          counts.forEach(function (val, idx) {
-            appendCountTo(metas[idx])(val)
-          })
-        })
-      }
-    })()
-  </script>
-
 
   
 
