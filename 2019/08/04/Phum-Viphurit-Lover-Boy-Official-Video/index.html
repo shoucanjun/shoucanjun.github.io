@@ -117,18 +117,18 @@
   </script>
 
 
-  <meta name="description" content="console.error(&quot;Error: [hexo-tag-aplayer] Specified asset file not found (bg_cover.png)&quot;);">
+  <meta name="description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-cGXAvRqm&quot;),             narrow: false,             autoplay: true,">
 <meta name="keywords" content="musicshare">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Phum Viphurit - Lover Boy [Official Video]">
 <meta property="og:url" content="http://shoucanjun.top/2019/08/04/Phum-Viphurit-Lover-Boy-Official-Video/index.html">
 <meta property="og:site_name" content="seon">
-<meta property="og:description" content="console.error(&quot;Error: [hexo-tag-aplayer] Specified asset file not found (bg_cover.png)&quot;);">
+<meta property="og:description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-cGXAvRqm&quot;),             narrow: false,             autoplay: true,">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-04T07:13:44.576Z">
+<meta property="og:updated_time" content="2019-08-04T07:23:09.413Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Phum Viphurit - Lover Boy [Official Video]">
-<meta name="twitter:description" content="console.error(&quot;Error: [hexo-tag-aplayer] Specified asset file not found (bg_cover.png)&quot;);">
+<meta name="twitter:description" content="var ap = new APlayer({             element: document.getElementById(&quot;aplayer-cGXAvRqm&quot;),             narrow: false,             autoplay: true,">
 
 
 
@@ -183,6 +183,8 @@
   </style>
 </noscript>
 
+<link rel="stylesheet" href="/assets/css/APlayer.min.css" class="aplayer-style-marker">
+<script src="/assets/js/APlayer.min.js" class="aplayer-script-marker"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="default">
@@ -380,9 +382,26 @@
 
       
         
-			<script>
-				console.error("Error: [hexo-tag-aplayer] Specified asset file not found (bg_cover.png)");
-			</script>
+        <div id="aplayer-cGXAvRqm" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;width:100%;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-cGXAvRqm"),
+            narrow: false,
+            autoplay: true,
+            showlrc: false,
+            music: {
+              title: "Lover Boy [Official Video]",
+              author: "Phum Viphurit",
+              url: "music.mp3",
+              pic: "/2019/08/04/Phum-Viphurit-Lover-Boy-Official-Video/bg_cover.jpg",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
       
     </div>
 
