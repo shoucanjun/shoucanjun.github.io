@@ -384,7 +384,22 @@
       
         
           
-            <iframe src="//player.bilibili.com/player.html?aid=62415468&cid=108475482&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+            <script type="text/javascript">
+function SetCwinHeight(){
+  var iframeid = document.getElementById("iframeid"); //iframe id
+  if (document.getElementById) {
+    if (iframeid && !window.opera) {
+      if (iframeid.contentDocument && iframeid.contentDocument.body.offsetHeight) {
+        iframeid.height = iframeid.contentDocument.body.offsetHeight + 50;
+      } else if (iframeid.Document && iframeid.Document.body.scrollHeight) {
+        frameid.height = iframeid.Document.body.scrollHeight + 50;
+      }
+    }
+  }
+}
+</script>
+
+<iframe width="100%" id="iframeid" onload="Javascript:SetCwinHeight()" src="//player.bilibili.com/player.html?aid=62415468&cid=108475482&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
           
         
@@ -521,7 +536,7 @@
         
           
             
-        <div id="aplayer-RaxUbKgk" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-BtKKQVtF" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content">[ti:music]
 [au:Phum Viphurit]
 [la:EN]
@@ -561,7 +576,7 @@
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-RaxUbKgk"),
+            element: document.getElementById("aplayer-BtKKQVtF"),
             narrow: false,
             autoplay: false,
             showlrc: 2,
@@ -891,10 +906,10 @@
         
           
             
-        <div id="aplayer-PJLVwxxN" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
+        <div id="aplayer-RxRhmhnf" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
 			  <script>
 				  var options = {"narrow":false,"autoplay":true,"showlrc":0,"mode":"random","mutex":true,"theme":"#e6d0b2","preload":"auto","listmaxheight":"513px","music":[{"title":"陪妳過假日","author":"Leo王-feat. 9m88","url":"/2019/07/28/陪妳過假日-Leo王-feat-9m88/staywithyouinholiday1.mp3","pic":"/2019/07/28/陪妳過假日-Leo王-feat-9m88/staywithyouinholiday1.png"},{"title":"陪妳過假日","author":"HMV record shop 新宿 ALTA","url":"/2019/07/28/陪妳過假日-Leo王-feat-9m88/staywithyouinholiday2.mp3","pic":"/2019/07/28/陪妳過假日-Leo王-feat-9m88/staywithyouinholiday2.png"}]};
-				  options.element = document.getElementById("aplayer-PJLVwxxN");
+				  options.element = document.getElementById("aplayer-RxRhmhnf");
 				  var ap = new APlayer(options);
 			    window.aplayers || (window.aplayers = []);
 				  window.aplayers.push(ap);
@@ -1188,12 +1203,12 @@
         
           
             
-        <div id="aplayer-zneIqSsw" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;width:100%;">
+        <div id="aplayer-mqvfudXB" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;width:100%;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-zneIqSsw"),
+            element: document.getElementById("aplayer-mqvfudXB"),
             narrow: false,
             autoplay: true,
             showlrc: false,
@@ -1344,12 +1359,12 @@
         
           
             
-        <div id="aplayer-dYAcAHuL" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;width:100%;">
+        <div id="aplayer-oPBSGHfB" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;width:100%;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-dYAcAHuL"),
+            element: document.getElementById("aplayer-oPBSGHfB"),
             narrow: false,
             autoplay: true,
             showlrc: false,
