@@ -117,18 +117,18 @@
   </script>
 
 
-  <meta name="description" content="console.error(&quot;Error: [hexo-tag-aplayer] Specified asset file not found (ihavenothing.png)&quot;);">
+  <meta name="description" content="var options = {&quot;narrow&quot;:false,&quot;autoplay&quot;:true,&quot;showlrc&quot;:0,&quot;mode&quot;:&quot;random&quot;,&quot;mutex&quot;:true,&quot;theme&quot;:&quot;#e6d0b2&quot;,&quot;preload&quot;:&quot;auto&quot;,&quot;listmaxheight&quot;:&quot;513px&quot;,&quot;music&quot;:[{&quot;title&quot;:&quot;我什么都没有&quot;,&quot;auth">
 <meta name="keywords" content="musicshare">
 <meta property="og:type" content="article">
 <meta property="og:title" content="我什么都没有-陈奕迅">
 <meta property="og:url" content="http://shoucanjun.top/2018/08/03/我什么都没有-陈奕迅/index.html">
 <meta property="og:site_name" content="seon">
-<meta property="og:description" content="console.error(&quot;Error: [hexo-tag-aplayer] Specified asset file not found (ihavenothing.png)&quot;);">
+<meta property="og:description" content="var options = {&quot;narrow&quot;:false,&quot;autoplay&quot;:true,&quot;showlrc&quot;:0,&quot;mode&quot;:&quot;random&quot;,&quot;mutex&quot;:true,&quot;theme&quot;:&quot;#e6d0b2&quot;,&quot;preload&quot;:&quot;auto&quot;,&quot;listmaxheight&quot;:&quot;513px&quot;,&quot;music&quot;:[{&quot;title&quot;:&quot;我什么都没有&quot;,&quot;auth">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-29T01:31:16.052Z">
+<meta property="og:updated_time" content="2019-08-29T12:50:17.805Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我什么都没有-陈奕迅">
-<meta name="twitter:description" content="console.error(&quot;Error: [hexo-tag-aplayer] Specified asset file not found (ihavenothing.png)&quot;);">
+<meta name="twitter:description" content="var options = {&quot;narrow&quot;:false,&quot;autoplay&quot;:true,&quot;showlrc&quot;:0,&quot;mode&quot;:&quot;random&quot;,&quot;mutex&quot;:true,&quot;theme&quot;:&quot;#e6d0b2&quot;,&quot;preload&quot;:&quot;auto&quot;,&quot;listmaxheight&quot;:&quot;513px&quot;,&quot;music&quot;:[{&quot;title&quot;:&quot;我什么都没有&quot;,&quot;auth">
 
 
 
@@ -183,6 +183,8 @@
   </style>
 </noscript>
 
+<link rel="stylesheet" href="/assets/css/APlayer.min.css" class="aplayer-style-marker">
+<script src="/assets/js/APlayer.min.js" class="aplayer-script-marker"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="default">
@@ -380,9 +382,14 @@
 
       
         
-			<script>
-				console.error("Error: [hexo-tag-aplayer] Specified asset file not found (ihavenothing.png)");
-			</script>
+        <div id="aplayer-cliZucLe" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;"></div>
+			  <script>
+				  var options = {"narrow":false,"autoplay":true,"showlrc":0,"mode":"random","mutex":true,"theme":"#e6d0b2","preload":"auto","listmaxheight":"513px","music":[{"title":"我什么都没有","author":"陈奕迅","url":"/2018/08/03/我什么都没有-陈奕迅/ihavenothing.mp3","pic":"/2018/08/03/我什么都没有-陈奕迅/ihavenothing.jpg"}]};
+				  options.element = document.getElementById("aplayer-cliZucLe");
+				  var ap = new APlayer(options);
+			    window.aplayers || (window.aplayers = []);
+				  window.aplayers.push(ap);
+			  </script>
 
       
     </div>
